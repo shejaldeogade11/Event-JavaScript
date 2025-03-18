@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Events</title>
+    <script>
+        function onclk() {
+            alert("Button clicked");
+            document.getElementById("bg").style.backgroundColor = "red";
+        }
+        
+        function ab() {
+            alert("Button double-clicked");
+            document.getElementById("bg").style.backgroundColor = "aliceblue";
+        }
+        
+        function onmouseover() {
+            alert("Mouse over");
+            document.getElementById("bg").style.backgroundColor = "white";
+        }
+        
+        function one21() {
+            alert("Mouse down");
+            document.getElementById("bg").style.backgroundColor = "red";
+        }
+        
+        function one22() {
+            alert("Mouse move");
+            document.getElementById("bg").style.backgroundColor = "red";
+        }
+        
+        function one23() {
+            alert("Info button clicked");
+            document.getElementById("bg").style.backgroundColor = "purple";
+        }
+        
+        function one24() {
+            alert("Light button clicked");
+            document.getElementById("bg").style.backgroundColor = "yellow";
+        }
+        
+        function one25() {
+            alert("Dark button clicked");
+            document.getElementById("bg").style.backgroundColor = "green";
+        }
+
+        function onloadFunc() {
+            alert("Page loaded");
+            document.getElementById("bg").style.backgroundColor = "red";
+        }
+    </script>
+    <style>
+        .btn {
+            font-weight: bold;
+            font-size: 21px;
+            margin: 3px;
+            padding: 10px 15px;
+            cursor: pointer; 
+            border: none;
+            color: white;
+        }
+        .btn-primary { background-color: dodgerblue; }
+        .btn-secondary { background-color: rgb(103, 118, 25); }
+        .btn-success { background-color: rgb(238, 154, 29); }
+        .btn-danger { background-color: rgb(72, 67, 74); }
+        .btn-warning { background-color: rgb(165, 42, 42); }
+        .btn-info { background-color: rgb(157, 42, 165); }
+        .btn-light { background-color: yellow; color: black; }
+        .btn-dark { background-color: green; }
+        .btn-link { background-color: blue; }
+    </style>
+</head>
+<body onload="onloadFunc()" id="bg" style="background-color: rgb(162, 152, 110);">
+    <center>
+        <button type="button" onclick="onclk()" class="btn btn-primary">Primary</button>
+        <button type="button" ondblclick="ab()" class="btn btn-secondary">Secondary</button>
+        <button type="button" onmouseover="onmouseover()" class="btn btn-success">Success</button>
+        <button type="button" onmousedown="one21()" class="btn btn-danger">Danger</button>
+        <button type="button" onmousemove="one22()" class="btn btn-warning">Warning</button>
+        <button type="button" onclick="one23()" class="btn btn-info">Info</button>
+        <button type="button" onclick="one24()" class="btn btn-light">Light</button>
+        <button type="button" onclick="one25()" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </center>
+</body>
+</html>
